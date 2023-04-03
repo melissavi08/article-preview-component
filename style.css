@@ -1,7 +1,40 @@
+:root {
+  --veryDarkColor: #48556a;
+  --darkColor: #6d7f97;
+  --lightColor: #9eafc2;
+  --veryLightColor: #ecf2f8;
+  --white: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 40px 24px;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: var(--veryLightColor);
+}
+
+main {
+  max-width: 732px;
+  border-radius: 8px;
+  background-color: var(--white);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
-  color: #3e52a3;
+  color: var(--darkColor);
+  text-decoration: none;
 }
