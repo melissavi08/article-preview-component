@@ -40,13 +40,86 @@ main {
 }
 
 .article-container {
-  padding: 32px;
+  position: relative;
+  padding: 36px 32px 20px;
+}
+
+.article__info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
 }
 
 h1 {
   font-size: 16px;
   line-height: 24px;
+  color: var(--veryDarkColor);
+}
+
+p {
+  padding-right: 6px;
+  font-size: 13px;
   color: var(--darkColor);
+  line-height: 20px;
+}
+
+.article__footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.article__author {
+  display: flex;
+  gap: 16px;
+}
+
+.avatar {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.author__name {
+  font-weight: 700;
+  color: var(--veryDarkColor);
+}
+
+.author__date {
+  color: var(--lightColor);
+}
+
+.img-share {
+  position: absolute;
+  right: 0;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--veryLightColor);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.img-share img {
+  width: 15px;
+}
+
+.article__share {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  display: none;
+  gap: 16px;
+  width: 100%;
+  padding: 16px 32px;
+  background-color: var(--veryDarkColor);
+}
+
+.share {
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 .attribution {
