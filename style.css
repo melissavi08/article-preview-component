@@ -41,14 +41,15 @@ main {
 
 .article-container {
   position: relative;
-  padding: 36px 32px 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .article__info {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-bottom: 32px;
+  padding: 36px 32px 20px;
 }
 
 h1 {
@@ -66,13 +67,15 @@ p {
 
 .article__footer {
   position: relative;
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-auto-flow: column;
+  padding: 12px 32px;
 }
 
 .article__author {
   display: flex;
   gap: 16px;
+  padding-bottom: 8px;
 }
 
 .avatar {
@@ -89,37 +92,56 @@ p {
   color: var(--lightColor);
 }
 
-.img-share {
-  position: absolute;
-  right: 0;
+.btn-share {
+  justify-self: right;
   display: grid;
   place-items: center;
   width: 32px;
   height: 32px;
+  margin: 4px 0px;
   border-radius: 50%;
   background-color: var(--veryLightColor);
   cursor: pointer;
   z-index: 10;
 }
 
-.img-share img {
+.active {
+  background-color: var(--darkColor);
+}
+
+.btn-share img {
   width: 15px;
+}
+
+.active img {
+  filter: brightness(0) saturate(100%) invert(1);
 }
 
 .article__share {
   position: absolute;
   bottom: 0;
-  display: flex;
+  left: 0;
   display: none;
+  align-items: center;
   gap: 16px;
   width: 100%;
-  padding: 16px 32px;
+  height: 64px;
+  padding: 12px 32px;
   background-color: var(--veryDarkColor);
 }
 
 .share {
+  padding-right: 0;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
+  color: var(--lightColor);
+}
+
+.social-media {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
 }
 
 .attribution {
