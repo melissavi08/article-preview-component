@@ -7,11 +7,10 @@ function showShareSection() {
 
   btnShare.classList.toggle("active");
   shareSection.style.display = "flex";
-  authorSection.style.display = "none";
+  authorSection.classList.toggle("invisible");
 
   if (btnActive) {
     shareSection.style.display = "none";
-    authorSection.style.display = "flex";
   }
 }
 
