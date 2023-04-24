@@ -20,11 +20,23 @@ function showShareSection() {
   const btnActive = btnShare.classList.contains("active");
 
   btnShare.classList.toggle("active");
-  shareSection.style.display = "flex";
+  shareSection.classList.add("fadeInUp");
+  shareSection.classList.remove("fadeOutDown");
+  authorSection.classList.remove("fadeInUp");
+  authorSection.classList.add("fadeOutDown");
   authorSection.classList.toggle("invisible");
 
   if (btnActive) {
-    shareSection.style.display = "none";
+    shareSection.classList.remove("fadeInUp");
+    shareSection.classList.add("fadeOutDown");
+    authorSection.classList.add("fadeInUp");
+    authorSection.classList.remove("fadeOutDown");
+  }
+
+  if (screen.width >= 570) {
+    authorSection.classList.add("no-animated");
+  } else {
+    authorSection.classList.remove("no-animated");
   }
 }
 
