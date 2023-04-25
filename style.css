@@ -30,6 +30,7 @@ main {
   border-radius: 8px;
   background-color: var(--white);
   overflow: hidden;
+  box-shadow: 15px 15px 50px -15px rgba(72, 85, 106, 0.3);
 }
 
 /* img section */
@@ -268,16 +269,17 @@ p {
     width: 85px;
     height: 160px;
     border-radius: 8px;
+    box-shadow: 10px 11px 20px 0px rgba(72, 85, 106, 0.3);
   }
 
   .article__share::after {
     content: "";
     position: absolute;
+    bottom: -10px;
+    left: 50%;
     border-top: 12px solid var(--veryDarkColor);
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
-    bottom: -10px;
-    left: 50%;
     transform: translateX(-50%);
   }
 
